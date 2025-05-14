@@ -1,36 +1,19 @@
-'use client'
-
-import Link from 'next/link'
-
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center p-6">
-      <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-3xl w-full text-center">
-        <h1 className="text-4xl font-extrabold text-gray-800 mb-4">Welcome to BAUAI Web App</h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Manage your items seamlessly. Secure login, fast access, and personalized content.
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-100 via-white to-teal-100 p-8">
+      <div className="max-w-2xl text-center bg-white shadow-xl rounded-2xl p-10">
+        <h1 className="text-4xl font-bold text-indigo-700 mb-4">Welcome to <span className="text-teal-600">ItemHum</span></h1>
+        <p className="text-lg text-gray-700 mb-6">
+          Built with ❤️ by <strong>Hrishikesh Thorat</strong>
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-          <Link
-            href="/signup"
-            className="bg-green-600 text-white px-6 py-3 rounded-full text-lg hover:bg-green-700 transition"
-          >
-            Get Started
-          </Link>
-          <Link
-            href="/items"
-            className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition"
-          >
-            View Items
-          </Link>
+        <p className="text-gray-600 mb-4">
+          ItemHum is a full-stack application where users can securely sign up, log in, and manage their items. Powered by Next.js, Prisma, PostgreSQL, and Tailwind CSS.
+        </p>
+        <div className="flex justify-center gap-4 mt-6">
+          <a href="/signup" className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition">Get Started</a>
+          <a href="/items/my" className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-4 rounded-lg transition">View My Items</a>
         </div>
-        <p className="text-sm text-gray-500">
-          Already have an account?{" "}
-          <Link href="/login" className="text-blue-600 hover:underline">
-            Login here
-          </Link>
-        </p>
       </div>
-    </div>
-  )
+    </main>
+  );
 }
